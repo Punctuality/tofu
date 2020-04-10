@@ -1,7 +1,7 @@
 import cats.effect.Bracket
 import cats.{ApplicativeError, MonadError}
 
-package object tofu {
+package object tofu extends BiTypes{
   type HasContext[F[_], C] = Context[F] { type Ctx = C }
 
   type HasLocal[F[_], C] = Local[F] { type Ctx = C }
